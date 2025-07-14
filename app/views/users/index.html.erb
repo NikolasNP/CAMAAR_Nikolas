@@ -1,0 +1,12 @@
+<h1>Importar dados do SIGAA</h1>
+
+<%= form_with url: "/admin/importar", method: :post, local: true, multipart: true do %>
+  <div>
+    <%= label_tag :file, "Arquivo JSON" %>
+    <%= file_field_tag :file, required: true %>
+  </div>
+
+  <div>
+    <%= submit_tag "Importar dados" %>
+  </div>
+<% end %>

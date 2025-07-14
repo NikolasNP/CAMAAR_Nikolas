@@ -1,0 +1,228 @@
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "registration" varchar, "status" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250714015628)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2025-07-14 02:03:49.751266', '2025-07-14 02:03:49.751269') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '2e23542b5ade7bc7676ef4b0d161da7635854fb1', '2025-07-14 02:03:49.753091', '2025-07-14 02:03:49.753093') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2025-07-14 02:03:49 +0000
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (8.0.2) lib/abstract_controller/base.rb:158:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+rack (3.1.16) lib/rack/urlmap.rb:76:in 'block in Rack::URLMap#call'
+rack (3.1.16) lib/rack/urlmap.rb:60:in 'Array#each'
+rack (3.1.16) lib/rack/urlmap.rb:60:in 'Rack::URLMap#call'
+rack-test (2.2.0) lib/rack/test.rb:360:in 'Rack::Test::Session#process_request'
+rack-test (2.2.0) lib/rack/test.rb:163:in 'Rack::Test::Session#custom_request'
+rack-test (2.2.0) lib/rack/test.rb:112:in 'Rack::Test::Session#get'
+/usr/local/rvm/rubies/ruby-3.4.1/lib/ruby/3.4.0/forwardable.rb:240:in 'Rack::Test::Methods#get'
+capybara (3.40.0) lib/capybara/rack_test/browser.rb:81:in 'Capybara::RackTest::Browser#process'
+capybara (3.40.0) lib/capybara/rack_test/browser.rb:56:in 'Capybara::RackTest::Browser#process_and_follow_redirects'
+capybara (3.40.0) lib/capybara/rack_test/browser.rb:26:in 'Capybara::RackTest::Browser#visit'
+capybara (3.40.0) lib/capybara/rack_test/driver.rb:46:in 'Capybara::RackTest::Driver#visit'
+capybara (3.40.0) lib/capybara/session.rb:281:in 'Capybara::Session#visit'
+capybara (3.40.0) lib/capybara/dsl.rb:52:in 'Method#call'
+capybara (3.40.0) lib/capybara/dsl.rb:52:in 'Capybara::DSL#visit'
+rspec-rails (8.0.1) lib/rspec/rails/example/feature_example_group.rb:29:in 'RSpec::Rails::FeatureExampleGroup#visit'
+spec/features/user_registration_spec.rb:5:in 'block (2 levels) in <top (required)>'
+rspec-core (3.13.5) lib/rspec/core/example.rb:263:in 'BasicObject#instance_exec'
+rspec-core (3.13.5) lib/rspec/core/example.rb:263:in 'block in RSpec::Core::Example#run'
+rspec-core (3.13.5) lib/rspec/core/example.rb:511:in 'block in RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.5) lib/rspec/core/example.rb:468:in 'block in RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.5) lib/rspec/core/hooks.rb:486:in 'block in RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.5) lib/rspec/core/hooks.rb:626:in 'block in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.5) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-rails (8.0.1) lib/rspec/rails/adapters.rb:75:in 'block (2 levels) in <module:MinitestLifecycleAdapter>'
+rspec-core (3.13.5) lib/rspec/core/example.rb:457:in 'BasicObject#instance_exec'
+rspec-core (3.13.5) lib/rspec/core/example.rb:457:in 'RSpec::Core::Example#instance_exec'
+rspec-core (3.13.5) lib/rspec/core/hooks.rb:390:in 'RSpec::Core::Hooks::AroundHook#execute_with'
+rspec-core (3.13.5) lib/rspec/core/hooks.rb:628:in 'block (2 levels) in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.5) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-core (3.13.5) lib/rspec/core/hooks.rb:629:in 'RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.5) lib/rspec/core/hooks.rb:486:in 'RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.5) lib/rspec/core/example.rb:468:in 'RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.5) lib/rspec/core/example.rb:511:in 'RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.5) lib/rspec/core/example.rb:259:in 'RSpec::Core::Example#run'
+rspec-core (3.13.5) lib/rspec/core/example_group.rb:653:in 'block in RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.5) lib/rspec/core/example_group.rb:649:in 'Array#map'
+rspec-core (3.13.5) lib/rspec/core/example_group.rb:649:in 'RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.5) lib/rspec/core/example_group.rb:614:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:121:in 'block (3 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:121:in 'Array#map'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:121:in 'block (2 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.5) lib/rspec/core/configuration.rb:2097:in 'RSpec::Core::Configuration#with_suite_hooks'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:116:in 'block in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.5) lib/rspec/core/reporter.rb:74:in 'RSpec::Core::Reporter#report'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:115:in 'RSpec::Core::Runner#run_specs'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:89:in 'RSpec::Core::Runner#run'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:71:in 'RSpec::Core::Runner.run'
+rspec-core (3.13.5) lib/rspec/core/runner.rb:45:in 'RSpec::Core::Runner.invoke'
+rspec-core (3.13.5) exe/rspec:4:in '<top (required)>'
+/usr/local/rvm/gems/ruby-3.4.1/bin/rspec:25:in 'Kernel#load'
+/usr/local/rvm/gems/ruby-3.4.1/bin/rspec:25:in '<main>'
+/usr/local/rvm/gems/ruby-3.4.1/bin/ruby_executable_hooks:22:in 'Kernel#eval'
+/usr/local/rvm/gems/ruby-3.4.1/bin/ruby_executable_hooks:22:in '<main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2025-07-14 02:07:48 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 8.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/admin/importar" for 127.0.0.1 at 2025-07-14 02:07:48 +0000
+Processing by UsersController#import as HTML
+  Parameters: {"file" => #<ActionDispatch::Http::UploadedFile:0x000076360bfd09c8 @tempfile=#<Tempfile:/tmp/RackMultipart20250714-13504-h8f8jr.json>, @content_type="application/json", @original_filename="usuarios.json", @headers="content-disposition: form-data; name=\"file\"; filename=\"usuarios.json\"\r\ncontent-type: application/json\r\ncontent-length: 107\r\n">, "commit" => "Importar dados"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2025-07-14 02:10:54 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | GC: 27.9ms)
+Completed 200 OK in 47ms (Views: 40.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 27.9ms)
+Started POST "/admin/importar" for 127.0.0.1 at 2025-07-14 02:10:54 +0000
+Processing by UsersController#import as HTML
+  Parameters: {"file" => #<ActionDispatch::Http::UploadedFile:0x00007fe5fd8eaf68 @tempfile=#<Tempfile:/tmp/RackMultipart20250714-15072-cvpewj.json>, @content_type="application/json", @original_filename="usuarios.json", @headers="content-disposition: form-data; name=\"file\"; filename=\"usuarios.json\"\r\ncontent-type: application/json\r\ncontent-length: 107\r\n">, "commit" => "Importar dados"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "registration" varchar, "status" integer DEFAULT 0, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250714021306)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250714015628);[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2025-07-14 02:15:21.506584', '2025-07-14 02:15:21.506587') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '54c6627776dc30613746a4825214df1c29c9805e', '2025-07-14 02:15:21.508194', '2025-07-14 02:15:21.508197') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2025-07-14 02:15:21 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/admin/importar" for 127.0.0.1 at 2025-07-14 02:15:21 +0000
+Processing by UsersController#import as HTML
+  Parameters: {"file" => #<ActionDispatch::Http::UploadedFile:0x0000773d887146b0 @tempfile=#<Tempfile:/tmp/RackMultipart20250714-17169-av1za2.json>, @content_type="application/json", @original_filename="usuarios.json", @headers="content-disposition: form-data; name=\"file\"; filename=\"usuarios.json\"\r\ncontent-type: application/json\r\ncontent-length: 107\r\n">, "commit" => "Importar dados"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2025-07-14 02:17:21 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | GC: 25.0ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 25.0ms)
+Started POST "/admin/importar" for 127.0.0.1 at 2025-07-14 02:17:21 +0000
+Processing by UsersController#import as HTML
+  Parameters: {"file" => #<ActionDispatch::Http::UploadedFile:0x0000703dcc8ba978 @tempfile=#<Tempfile:/tmp/RackMultipart20250714-18182-808oqe.json>, @content_type="application/json", @original_filename="usuarios.json", @headers="content-disposition: form-data; name=\"file\"; filename=\"usuarios.json\"\r\ncontent-type: application/json\r\ncontent-length: 107\r\n">, "commit" => "Importar dados"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "test_models"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "test_models" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "registration" varchar, "status" integer DEFAULT 0, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250714022350)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250714021306),
+(20250714015628);[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2025-07-14 02:28:40.593849', '2025-07-14 02:28:40.593853') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '243e88802f88a02d00d20c40a07403bdcedcf953', '2025-07-14 02:28:40.594940', '2025-07-14 02:28:40.594942') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2025-07-14 02:28:40 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+Started POST "/admin/importar" for 127.0.0.1 at 2025-07-14 02:28:40 +0000
+Processing by UsersController#import as HTML
+  Parameters: {"file" => #<ActionDispatch::Http::UploadedFile:0x00007ff21ee14570 @tempfile=#<Tempfile:/tmp/RackMultipart20250714-23676-5zofn4.json>, @content_type="application/json", @original_filename="usuarios.json", @headers="content-disposition: form-data; name=\"file\"; filename=\"usuarios.json\"\r\ncontent-type: application/json\r\ncontent-length: 107\r\n">, "commit" => "Importar dados"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m

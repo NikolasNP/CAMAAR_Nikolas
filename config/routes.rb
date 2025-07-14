@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root "home#index"  # se quiser uma página inicial
+
+  get  "/admin/usuarios", to: "users#index"
+  post "/admin/importar", to: "users#import"
+
+  get "/definir_senha/:token", to: "passwords#edit", as: :edit_password
+  patch "/definir_senha/:token", to: "passwords#update", as: :update_password
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
