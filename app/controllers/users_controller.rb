@@ -26,5 +26,4 @@ class UsersController < ApplicationController
             redirect_to admin_usuarios_path, notice: "Sem novos usuários."
         end
     end
-
 end
